@@ -6,7 +6,8 @@ const ProviderLayout = ({ children }) => {
   return (
     <SidebarProvider>
       <div className="min-h-screen bg-background">
-        <ProviderSidebar />
+        <ProviderSidebar
+         />
 
         {/* Main Content */}
         <main
