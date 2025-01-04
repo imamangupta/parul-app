@@ -1,12 +1,8 @@
+
 import React from "react";
 
-import {
-  Settings,
-  Database,
-  FolderKanban,
-  ChartArea,
-  Building2,
-} from "lucide-react";
+import { Home, BarChart2, Zap, PenToolIcon as Tool, Settings, Building2 } from 'lucide-react'
+
 
 import Link from "next/link";
 import {
@@ -22,20 +18,21 @@ import {
 } from "../ui/sidebar";
 
 const companyNav = [
-  { name: "Dashboard", Icon: ChartArea, link: "/admin" },
-  { name: "Projects", Icon: FolderKanban, link: "/admin/projects" },
-  { name: "Employees", Icon: Database, link: "/admin/employee" },
-  { name: "Settings", Icon: Settings, link: "/admin/settings" },
+  { name: "Dashboard", Icon: Home, link: "/consumer" },
+  { name: "Bills", Icon: BarChart2, link: "/consumer/bills" },
+  { name: "Solar-hosting", Icon: Zap, link: "/consumer/solar-hosting" },
+  { name: "Maintenance", Icon: Tool, link: "/consumer/maintenance" },
+  { name: "Setting", Icon: Settings, link: "/consumer/setting" },
 ];
 
 const ConsumerSidebar = async () => {
   return (
     <Sidebar>
-      <SidebarHeader className="px-5 border-b py-2">
+      <SidebarHeader className="px-5 border-b py-3">
         <div>
           <div className="flex gap-3">
             <h1 className="text-lg font-semibold">
-              blue<span className="text-blue-700">Circle</span>.
+              <span className="text-blue-700">Circle</span>.
             </h1>
           </div>
           <p className="text-sm text-slate-500">for organization</p>
